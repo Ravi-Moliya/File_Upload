@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Create New Account</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<script type="text/javascript" src="./CreateNewAccount.js"></script>
+
+		<style type="text/css">
+			small{color:red;font-weight: bold;}
+		</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4">
+                        <center><h4><i class="fa fa-users"></i> Create New Account</h4></center><hr />
+
+                        <center><img id="ImgProductDisplayPic" src="DefaultProduct.jpg" alt="Default Image" height="250px" width="220px"/></center><br /><br />    
+                        <div class="form-group">
+                            <label for="file" class="col-md-3 control-label">Upload File</label>
+                            <div class="col-md-9">
+                                
+                                <input type="file" id="FU_ProductImage" class="form-control" name="file" required>
+                                <center><small id="ProductImageValidate"></small></center><br/>
+
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <span>First Name:</span><br/>
+                                   <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                       <input name="FName" id="FName" type="text" placeholder="Enter First Name Here.." maxlength="20" class="form-control" />
+                                   </div>
+                                   <small id="FNameValidate"></small>
+                            </div>
+                           <div class="form-group">
+                               <span>Last Name:</span><br/>
+                                    <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input name="LName" id="LName" type="text" placeholder="Enter Last Name Here.." maxlength="20" class="form-control" />
+                                    </div>
+                               <small id="LNameValidate"></small>
+                            </div>
+                           <div class="form-group">
+                               <span><i class="fa fa-phone"></i> Contact No.:</span><br/>
+                               <div class="input-group">
+                                      <span class="input-group-addon">+91-</span>
+                                           <input name="ContactNo" id="ContactNo" type="text" placeholder="Enter Contact No. Here.." maxlength="10" class="form-control" />
+                                </div>
+                               <small id="ContactNoValidate"></small>
+                           </div>
+                           <div class="form-group">
+                               <span>Email Id:</span><br/>
+                                   <div class="input-group">
+                                       <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                       <input name="EmailId" id="EmailId" type="text" placeholder="Enter Email Id Here.." maxlength="50" class="form-control" />
+                                  </div>
+                               <small id="EmailIdValidate"></small>
+                           </div>
+                           <div class="form-group">
+                              <span>Password:</span><br/>
+                               <div class="input-group">
+                                   <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                   <input name="Password" id="Password" type="password" placeholder="Enter Password Here.." maxlength="12" class="form-control" />
+                               </div>
+                               <small id="PasswordValidate"></small>
+                           </div>
+                           <center><input type="button" value="Create New Account" id="BtnCNA" class="btn btn-primary" /></center><br/>
+                           <center>Already a Member? <input id="BtnSignin" data-toggle="modal" data-target="#Signin" type="button" value="Sign In" class="btn btn-sm btn-success" /></center><br/>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--
+            For Sign In And Log In User...
+        -->
+        <div class="modal fade" id="Signin" tabindex="-1" role="dialog" aria-labelledby="SigninLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <span style="font-size:30px;" class="modal-title" id="SigninLabel"><i class="fa fa-users"></i> Sign In</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="font-size:40px;" aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                           <div class="form-group">
+                               <span>Email Id:</span><br/>
+                                   <div class="input-group">
+                                       <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                       <input name="Emailid" id="Emailid" type="text" placeholder="Enter Email Id Here.." maxlength="50" class="form-control" />
+                                  </div>
+                               <small id="Emailidvalidate"></small>
+                           </div>
+                           <div class="form-group">
+                              <span>Password:</span><br/>
+                               <div class="input-group">
+                                   <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                   <input name="password" id="password" type="password" placeholder="Enter Password Here.." maxlength="12" class="form-control" />
+                               </div>
+                               <small id="passwordvalidate"></small>
+                           </div>
+                           <div class="modal-footer">
+                            <center>
+                            <input id="Btnsignin" type="button" value="Sign In" class="btn btn-primary" />
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </center>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
