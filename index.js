@@ -87,5 +87,5 @@ app.post('/CreateNewAccount',(req,res)=>{
 });
 app.use(express.static(__dirname + '/js'));
 app.use(express.static(__dirname + '/images'));
-app.listen(2020,()=>{console.log("listion on port no 2020 ......")});
+app.listen(2000,()=>{console.log("listion on port no 2000 ......")});
 app.set('view engine','ejs');
